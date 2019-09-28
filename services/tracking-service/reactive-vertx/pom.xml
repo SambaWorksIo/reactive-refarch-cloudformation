@@ -19,9 +19,9 @@
         <!-- the main verticle class name -->
         <vertx.verticle>com.amazon.BootStrapVerticle</vertx.verticle>
         <app.version>1.6</app.version>
-        <vertx.version>3.7.1</vertx.version>
-        <awssdk.version>2.6.2</awssdk.version>
-        <graal.version>19.1.0</graal.version>
+        <vertx.version>3.8.1</vertx.version>
+        <awssdk.version>2.9.4</awssdk.version>
+        <graal.version>19.2.0.1</graal.version>
         <skip.native>true</skip.native>
     </properties>
 
@@ -172,25 +172,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>io.reactiverse</groupId>
-                <artifactId>vertx-maven-plugin</artifactId>
-                <version>1.0.18</version>
-                <executions>
-                    <execution>
-                        <id>vmp</id>
-                        <goals>
-                            <goal>initialize</goal>
-                            <goal>package</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <redeploy>true</redeploy>
-                    <attach>false</attach>
-                    <classifier>fat</classifier>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>com.oracle.substratevm</groupId>
                 <artifactId>native-image-maven-plugin</artifactId>
